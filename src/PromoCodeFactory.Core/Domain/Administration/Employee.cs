@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 
 namespace PromoCodeFactory.Core.Domain.Administration
 {
@@ -14,5 +15,8 @@ namespace PromoCodeFactory.Core.Domain.Administration
         public List<Role> Roles { get; set; }
 
         public int AppliedPromocodesCount { get; set; }
+        public Employee() { 
+            Id = Guid.NewGuid();
+        }
     }
 }
